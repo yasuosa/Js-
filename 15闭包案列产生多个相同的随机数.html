@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--现在遇到的逆境 都是以后成长的额阶梯-->
+<script>
+    function showRandom() {
+        var num=Math.random()*10+1;
+        return function () {
+            console.log(num);
+        }
+    }
+
+    var  ff=showRandom();
+    ff();
+    ff();
+    ff();
+</script>
+</body>
+</html>

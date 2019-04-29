@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--现在遇到的逆境 都是以后成长的额阶梯-->
+<script>
+    function getNum(num) {
+        if(num==1){
+            return num;
+        }
+        return num+getNum(num-1);
+    }
+
+    console.log(getNum(5));
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>这是div</div>
+<div>这是div</div>
+<div>这是div</div>
+<p>这是p</p>
+<p>这是p</p>
+<p>这是p</p>
+<!--现在遇到的逆境 都是以后成长的额阶梯-->
+<script>
+
+    var getTag=10;
+    var dvObjs=20;
+    var pObjs=20;
+    (function () {
+        function getTag(tagName) {
+            return document.getElementsByTagName(tagName);
+        }
+
+        var dvObjs=getTag("div");
+        for (let i = 0; i < dvObjs.length; i++) {
+            dvObjs[i].style.border="2px solid pink";
+        }
+
+        var pObjs=getTag("p");
+        for (let i = 0; i < dvObjs.length; i++) {
+            pObjs[i].style.border="2px solid pink";
+        }
+    })();
+
+
+    console.log(getTag);
+    console.log(dvObjs);
+    console.log(pObjs);
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>对自己狠点</title>
+  <style>
+    ul {
+      list-style-type: none;
+    }
+
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+
+    img {
+      width: 200px;
+      height: 180px;
+    }
+
+    input {
+      margin-left: 30%;
+    }
+  </style>
+  <script>
+    //$永远都是24k纯帅的十八岁的杨哥$
+  </script>
+</head>
+<body>
+<ul>
+  <li><img src="images/ly.jpg" alt=""><br/><input type="button" value="赞(1)"></li>
+  <li><img src="images/lyml.jpg" alt=""><br/><input type="button" value="赞(1)"></li>
+  <li><img src="images/fj.jpg" alt=""><br/><input type="button" value="赞(1)"></li>
+  <li><img src="images/bd.jpg" alt=""><br/><input type="button" value="赞(1)"></li>
+</ul>
+
+<input type="button" value="测试" id="btn">
+<script>
+
+    //  方法一
+    // var list=document.getElementsByTagName("input");
+    // for (let i = 0; i < list.length; i++) {
+    //   list[i].setAttribute("score",1);
+    //   list[i].onclick=function () {
+    //     this.setAttribute("score",parseInt(this.getAttribute("score"))+1);
+    //     this.value="赞("+this.getAttribute("score")+")";
+    //   }
+    // }
+  
+  var list=document.getElementsByTagName("input");
+    for (let i = 0; i < list.length; i++) {
+      list[i].onclick=getValue();
+    }
+    
+    function getValue() {
+      var value=2;
+      return function () {
+        //每一点击的时候
+         this.value="赞("+(value++)+")";
+      }
+    }
+
+    
+
+</script>
+</body>
+</html>
