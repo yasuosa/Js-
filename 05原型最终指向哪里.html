@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Person() {
+
+    }
+
+    Person.prototype.eat=function () {
+        console.log(22);
+    };
+
+
+    var per=new Person();
+    console.dir(per);
+    console.dir(Person);
+
+    //实例对象中有_proto_原型
+    //构造函数中有prototype原型
+    //prototype是对象
+    //所有 prototype也有_proto，那么指向哪里
+    //实例对象__proto__指向 狗在函数的prototype
+    //那么prototype中的 __proto__指向 某个构造函数的prototype
+
+</script>
+<!--现在遇到的逆境 都是以后成长的额阶梯-->
+
+</body>
+</html>

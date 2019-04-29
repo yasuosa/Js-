@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--现在遇到的逆境 都是以后成长的额阶梯-->
+<script>
+    function Person(name,sex,age) {
+        this.name = name;
+        this.sex = sex;
+        this.age = age;
+    }
+
+    Person.prototype.eat=function () {
+        console.log("吃饭");
+    };
+    Person.prototype.sleep=function () {
+        console.log("睡觉");
+    };
+
+    Person.prototype.play=function () {
+        console.log("玩");
+    };
+
+
+    //js中通过原型来继承
+
+    function Student(score) {
+        this.score=score;
+    }
+    Student.prototype=new Person("小明","男",10);
+
+
+    var stu=new Student(50);
+
+    console.log(stu.play());
+
+
+</script>
+</body>
+</html>

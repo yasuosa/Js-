@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+
+        //原型对象中方法中的this就是实列对象
+        function Person(age) {
+            this.age=age;
+        }
+
+        Person.prototype.eat=function () {
+            console.log("111");
+        };
+
+
+
+
+
+        function Student() {
+
+        }
+
+        Student.prototype.study=function () {
+            console.log(222);
+        };
+        Student.prototype=new Person(10);
+        var stu=new Student();
+        stu.eat();
+        // stu.study();
+
+        //原型指向可以改变
+        //实列对象的原型 _proto_指向的是改对象所在的构造函数的原型对象
+        //构造函数的原型对象（prototype)指向改变了，
+        //实列对象的原型（_proto_)指向也改变
+
+
+        //原型的指向是可以改变的
+        //实例对象和原型对象之间的关系是通过
+        //_proto_原型来联系起来的，这个关系就是原型链
+
+
+
+    </script>
+</head>
+<body>
+
+<!--现在遇到的逆境 都是以后成长的额阶梯-->
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--现在遇到的逆境 都是以后成长的额阶梯-->
+<script>
+    //把一个对象中的属性方法复制到另一个对象中
+
+    // var obj={
+    //     name:"11",
+    //     age:20,
+    //     sleep:function () {
+    //         console.log(222);
+    //     }
+    // };
+    //
+    // // var obj2=obj;
+    // // console.log(obj2.name);
+    // // obj2.sleep();
+    //
+    // var obj2={};
+    // for(var key in obj){
+    //     obj2[key]=obj[key];
+    // }
+    //
+    // console.log(obj2,obj2.name);
+
+
+    function Person(name) {
+
+    }
+
+    Person.prototype.age=10;
+    Person.prototype.sex="男";
+    Person.prototype.play=function () {
+        console.log(2220);
+    };
+
+
+    var obj2={};
+
+    for(var key in Person.prototype){
+        obj2[key]=Person.prototype[key];
+    }
+
+    console.log(obj2);
+
+</script>
+</body>
+</html>

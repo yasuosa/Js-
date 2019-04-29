@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Person(age,sex) {
+        this.age=age;
+        this.sex=sex;
+
+    }
+
+
+    Person.prototype.sex="女";
+
+    var per=new Person(10,"男");
+
+    console.log(per.sssss);
+
+    //实例对象访问这个属性，应该先从实例对象中赵，找到了直接用
+    //  找不到就去原型对象中赵
+
+    //
+    // per.__proto__.sex="人";
+    // console.log(per.sex);
+    // console.dir(per);
+</script>
+<!--现在遇到的逆境 都是以后成长的额阶梯-->
+
+</body>
+</html>
