@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--现在遇到的逆境 都是以后成长的额阶梯-->
+<script>
+    var obj={
+        age:10,
+        sex:"男",
+        car:["ss","AAA","EWW"]
+        dog:{
+            name:"小黄",
+            age:2,
+            sex:"雄",
+            color:"黑白色"
+        }
+    };
+    
+    var obj2={};
+    
+    //深拷贝 还是复制
+    //深 把一个对象中 所有属性 或者方法
+    //一个个找到 在另一个对象中开辟相应控件，一个个存储
+    
+    function extend(a,b) {
+        for(var key in a){
+            var item=a[key];
+            if(item instanceof Array){
+                b[key]=[];
+                extend(item,b[key]);
+            }else if(item instanceof  Object){
+                b[key]={};
+                extend(item,b[key]);
+            }else {
+                b[key]=item;
+            }
+        }
+    }
+    
+</script>
+</body>
+</html>

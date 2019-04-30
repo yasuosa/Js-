@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--现在遇到的逆境 都是以后成长的额阶梯-->
+<script>
+    //浅拷贝 ：拷贝就是复制
+
+    var obj={
+        age:10,
+        sex:"男",
+        car:["ss","ss","ss"]
+    };
+    var obj2={};
+    function extend(a,b) {
+        for(var key in a){
+            b[key]=a[key];
+        }
+    }
+
+    extend(obj,obj2);
+    console.log(obj2);
+</script>
+</body>
+</html>
