@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+请输入你的名字<input type="text" id="input">*<br/>
+<!--现在遇到的逆境 都是以后成长的额阶梯-->
+<script>
+    //中文  [\u4e00-\u9fa5]
+    document.getElementById("input").onblur=function () {
+        if(/^[\u4e00-\u9fa5]{2,6}$/.test(this.value)){
+            this.style.backgroundColor="green";
+        }else {
+            this.style.backgroundColor="red";
+        }
+    }
+</script>
+</body>
+</html>

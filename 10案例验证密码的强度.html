@@ -1,0 +1,92 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<style type="text/css">
+  #dv{
+    width: 300px;
+    height:200px;
+    position: absolute;
+    left:300px;
+    top:100px;
+  }
+  .strengthLv0 {
+    height: 6px;
+    width: 120px;
+    border: 1px solid #ccc;
+    padding: 2px;
+  }
+
+  .strengthLv1 {
+    background: red;
+    height: 6px;
+    width: 40px;
+    border: 1px solid #ccc;
+    padding: 2px;
+  }
+
+  .strengthLv2 {
+    background: orange;
+    height: 6px;
+    width: 80px;
+    border: 1px solid #ccc;
+    padding: 2px;
+  }
+
+  .strengthLv3 {
+    background: green;
+    height: 6px;
+    width: 120px;
+    border: 1px solid #ccc;
+    padding: 2px;
+  }
+</style>
+<body>
+<div id="dv">
+  <label for="pwd">密码</label>
+  <input type="text" id="pwd" maxlength="16"><!--课外话题-->
+  <div>
+    <em>密码强度：</em>
+    <em id="strength"></em>
+    <div id="strengthLevel" class="strengthLv0"></div>
+  </div>
+</div>
+<script src="common.js"></script>
+<script>
+   my$("pwd").onfocus=function () {
+      this.onkeyup=function () {
+        if(this.value.length>=6) {
+          my$("strengthLevel").className = "strengthLv" + getLev(this.value);
+        }else {
+          my$("strengthLevel").className = "strengthLv0";
+        }
+      };
+   }
+
+
+   function getLev(value) {
+     var lev=0;
+     if(/\d/.test(value)){
+       lev++;
+     }
+     if(/[a-zA-Z]/.test(value)){
+       lev++;
+     }
+     if(/\W/.test(value)){
+       lev++;
+     }
+     return lev;
+   }
+
+</script>
+
+
+
+
+
+</body>
+</html>
